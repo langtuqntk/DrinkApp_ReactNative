@@ -20,6 +20,10 @@ export default class App extends Component {
               default: return <OrderHistory navigator={navigator} />;
             }
           }}
+          configureScene={route => {
+              if (route.name === 'AUTHENTICATION') return Navigator.SceneConfigs.FloatFromRight;
+              return Navigator.SceneConfigs.FloatFromLeft;
+          }}
         />
     );
   }
